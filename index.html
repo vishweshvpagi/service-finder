@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Find Nearest Service Provider</h1>
+      <form>
+        <select id="service">
+          <option value="mechanic">Mechanic</option>
+          <option value="plumber">Plumber</option>
+          <option value="electrician">Electrician</option>
+        </select>
+        <button
+          type="button"
+          onclick="findService(document.getElementById('service').value)"
+        >
+          Find
+        </button>
+      </form>
+
+      <!-- Button to add new service provider -->
+      <button
+        class="add-provider"
+        onclick="window.location.href='add-provider.html'"
+      >
+        Add Service Provider
+      </button>
+
+      <div id="results">
+        <!-- Results will be displayed here -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
